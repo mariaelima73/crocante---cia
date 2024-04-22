@@ -24,13 +24,13 @@
         <nav class="main">    
             <ul class="list">
                 <li>
-                    <input class="category" type="button" value="Pães"  onclick="clicar()">
+                    <button class="category" id="catPaes" type="button" value="Pães" onclick="clicarPaes()">Pães</button>
                 </li>
                 <li>
-                    <input class="category" type="button" value="Salgados">
+                    <button class="category" id="catSalg" type="button" value="Salgados" onclick="clicarSalgados()">Salgados</button>
                 </li>
                 <li>
-                     <input class="category" type="button" value="Bebidas">
+                    <button class="category" id="catBeb" type="button" value="Bebidas" onclick="clicarBebidas()">Bebidas</button>
                 </li>
                 <li><a href="carrinho.html"><img src="imagens/carrinho.png" alt="carrinho" class="carrinho"></a></li>
              </ul>
@@ -42,79 +42,78 @@
 
     <div class="grade">
         <div class="container-product">
-            <h4>Cupcake cremoso</h4>
-            <img src="imagens/doce1.png" alt="produto" class="img-doce" id="doce2">
+            <h4>Donuts</h4>
+            <img src="imagens/donuts.jpg" alt="produto" class="img" id="doce2">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
         </div>
         
         <div class="container-product">
             <h4>Croassaint Recheado</h4>
-            <img src="imagens/croassaint.jpg" alt="produto" class="img-doce">
+            <img src="imagens/croassaint.jpg" alt="produto" class="img">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
         
         <div class="container-product">
-            <h4>Bolo confeitado</h4>
-            <img src="imagens/bolo2.jpg" alt="produto" class="img-doce">
+            <h4>Bolo Confeitado</h4>
+            <img src="imagens/bolo2.jpg" alt="produto" class="img">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
         
         <div class="container-product">
             <h4>Macarrons</h4>
-            <img src="imagens/macarrons.jpg" alt="produto" class="img-doce">
+            <img src="imagens/macarrons.jpg" alt="produto" class="img">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
         
         <div class="container-product">
             <h4>Sonho</h4>
-            <img src="imagens/sonho.jpg" alt="produto" class="img-doce">
+            <img src="imagens/sonho.jpg" alt="produto" class="img">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
         
         <div class="container-product">
-            <h4>Bolo recheado</h4>
-            <img src="imagens/bolo1.jpg" alt="produto" class="img-doce">
+            <h4>Bolo Recheado</h4>
+            <img src="imagens/bolo1.jpg" alt="produto" class="img">
                 <p class="description">
                     descrição do produto.
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -144,5 +143,9 @@
                 </ul>
             </div>
         </footer>
+
+        <script src="script.js">
+        </script>
+    
     </body>
 </html>    

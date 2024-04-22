@@ -23,15 +23,17 @@
         <nav class="main">    
             <ul class="list">
                 <li>
-                    <input class="category" type="button" value="Doces" onclick="clicar()">
+                    <button class="category" id="catDoc" type="button" value="Doces" onclick="clicarDoces()">Doces</button>
                 </li>
                 <li>
-                    <input class="category" type="button" value="Salgados" onclick="clicar()">
+                    <button class="category" id="catSalg" type="button" value="Salgados" onclick="clicarSalgados()">Salgados</button>
                 </li>
                 <li>
-                    <input class="category" type="button" value="Bebidas" onclick="clicar()">
+                    <button class="category" id="catBeb" type="button" value="Bebidas" onclick="clicarBebidas()">Bebidas</button>
                 </li>
-                <li><a href="carrinho.html"><img src="imagens/carrinho.png" alt="carrinho" class="carrinho" onclick="clicar()"></a></li>
+                <li><a href="carrinho.html"><img src="imagens/carrinho.png" alt="carrinho" class="carrinho" onclick="clicarCarrinho()"></a></li>
+                <!--<li><button img src="imagens/carrinho.png" alt="carrinho" class="carrinho" id="car" onclick="clicarCarrinho()"></button></li>
+            como colocar imagem no botão-->
             </ul>
                     
         </nav>
@@ -48,7 +50,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
         </div>
         
@@ -60,7 +62,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -73,7 +75,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -86,7 +88,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -99,7 +101,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -112,7 +114,7 @@
                 </p>
                 <p>R$ 39,99</p>
             <div class="add-button">
-                <input type="button" value="Adicionar ao carrinho" id="button-buy" class="button">
+                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
             </div>
 
         </div>
@@ -141,6 +143,10 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js">
+    </script>
+
 </body>
 </html>
 
