@@ -30,6 +30,15 @@ var catBebidas = document.getElementById('catBeb')
         location.href = 'http://127.0.0.1:5500/carrinho.html'
     }*/
 
+//FINALIZAR PEDIDO
+
+var addproduct = document.getElementById('button-buy')
+
+    function addcarinho() {
+        
+    }
+
+
 
 
 
