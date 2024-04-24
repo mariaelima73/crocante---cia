@@ -24,12 +24,6 @@ var catBebidas = document.getElementById('catBeb')
         location.href = 'http://127.0.0.1:5500/bebidas.html'
     }
 
-/*var catBebidas = document.getElementById('car')
-
-    function clicarCarrinho(){
-        location.href = 'http://127.0.0.1:5500/carrinho.html'
-    }*/
-
 //FINALIZAR PEDIDO
 
 var addproduct = document.getElementById('button-buy')
@@ -38,7 +32,32 @@ var addproduct = document.getElementById('button-buy')
         
     }
 
+//Fazer a imagem aumentar quando passar o mouse
 
+const boxes = document.querySelectorAll(".box-img")
 
+//Iteração sobre cada elemento box
 
+boxes.forEach(box => {
+    //Encontrar o elemento img dentro do elemento box atual
+    const img = box.querySelector(".img")
 
+    //Adicionar os ouvintes de eventos ao elemento box atual
+    box.addEventListener("mousemove", (e) => {
+
+        const x = e.clientX - box.getBoundingClientRect().left
+        const y = e.clientY - box.getBoundingClientRect().top
+
+        console.log(x, y)
+
+        img.style.transformOrigin = `${x}px ${y}px`
+        img.style.transform = "scale(1.5)"
+    })
+
+    box.addEventListener("mouseleave", (e) => {
+
+        img.style.transformOrigin = "center"
+        img.style.transform = "scale(1)"
+    })
+
+})
