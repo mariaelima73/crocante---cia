@@ -20,11 +20,115 @@
         </nav>
     </header>
 
-    <h3>Finalizar pedido:</h3>
+    <section class="menu">
+        <nav class="main">    
+            <ul class="list">
+                <li>
+                    <button class="category" id="catPaes" type="button" value="Pães" onclick="clicarPaes()">Pães</button>
+                </li>
+                <li>
+                    <button class="category" id="catDoc" type="button" value="Doces" onclick="clicarDoces()">Doces</button>
+                </li>
+                <li>
+                    <button class="category" id="catSalg" type="button" value="Salgados" onclick="clicarSalgados()">Salgados</button>
+                </li>
+                <li>
+                    <button class="category" id="catBeb" type="button" value="Bebidas" onclick="clicarBebidas()">Bebidas</button>
+                </li>
+            </ul>
+                    
+        </nav>
+    </section>
+
+    <section>
+
+        <h2 class="title-section">Carrinho</h2>
+        
+        <table class="container-cart">
+            
+            <thead>
+                <tr>
+                <th class="table-header-item first-col">Item</th>
+                <th class="table-header-item second-col">Preço</th>
+                <th class="table-header-item third-col">Quantidade</th>
+                </tr>
+            </thead>
+
+            
+            <tbody>
+                <tr class="cart-product">
+                    <td class="">
+                        <img src="" alt="" class="">
+                        <strong class="product-title">Produto</strong>
+                    </td>
+                    
+                    <td class="">
+                        <span class="product-preco">R$ 129,99</span>
+                    </td>
+
+                    <td>
+                        <div class="container-quant-button">
+                            <input type="number" value="1" min="0" class="quant-product">
+                            <button type="button" class="remove-button">Remover</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="cart-product">
+                    <td class="">
+                        <img src="" alt="" class="">
+                        <strong class="product-title">Produto</strong>
+                    </td>
+
+                    <td> 
+                        <span class="product-preco">R$129,99</span>
+                    </td>
+
+                    <td>
+                        <div class="container-quant-button">
+                            <input type="number" value="1" min="0" class="quant-product">
+                            <button type="button" class="remove-button"> Remover</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+            <!--RODAPÉ DA TABELA-->
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <div class="table-total">                        
+                            <strong>Total:</strong>
+                            <span class="preco">R$ 1000,00</span>
+                            <br>
+                        </div>
+                    </td>
+                </tr>
+                
+            </tfoot>
+        </table>
+
+    </section>
 
 
-    
-    <h3>Forma de pagamento:</h3>
+    <section class="payment">
+        <h3>Forma de pagamento:</h3>
+        
+        <div class="">
+            <input type="radio" name="opção_payment">Boleto
+
+
+        </div>
+
+
+        
+        
+        
+        
+        
+        <button type="button" class="purchase-button">Finalizar compra</button>
+    </section>
+
 
 
 
@@ -50,5 +154,6 @@
                 </li>
             </ul>
         </div>
-    </footer>    
+    </footer>
+    <script src="script.js"></script>    
 </body>
