@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-image: url(imagens/header11.1.jpg);
+    background-image: url(imagens/header12.jpg);
     background-size: 100%;
     background-position: start;
     border-radius: 8px;
@@ -58,7 +58,7 @@ header {
 }
 
 .logo {
-    width: 280px;
+    width: 500px;
 }
 
 .img-zoom, .container, .category, button, .carrinho{
@@ -352,7 +352,8 @@ header {
     margin-top: 5px;
     margin-bottom: 20px;
     text-transform: uppercase;
-
+    border: 0;
+    box-shadow: 2px 2px 2px #422709
 }
 
 .product-qnt-input {
@@ -365,6 +366,42 @@ header {
     text-align: center;
     padding: 15px;
     
+}
+
+.container-payment {
+    padding: 10px;
+    background: transparent;
+    border: 2px solid  white;
+    backdrop-filter: blur(8px);
+    box-shadow: 10px 10px #422709;
+    margin: 30px;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 280px;
+}
+
+.payment {
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.for-payment {
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.purchase-button {
+    width: 300px;
+    height: 50px;
+    font-family: "Platypi", cursive;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(6, 148, 6);
+    box-shadow: 5px 5px 5px var(--marron1);
+    margin-left: 143px;
+    border: 0;
 }
 
 

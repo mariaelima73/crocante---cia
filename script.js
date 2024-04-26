@@ -24,13 +24,6 @@ var catBebidas = document.getElementById('catBeb')
         location.href = 'http://127.0.0.1:5500/bebidas.html'
     }
 
-//FINALIZAR PEDIDO
-
-var addproduct = document.getElementById('button-buy')
-
-    function addcarinho() {
-        
-    }
 
 //Fazer a imagem aumentar quando passar o mouse
 
@@ -51,7 +44,7 @@ boxes.forEach(box => {
         console.log(x, y)
 
         img.style.transformOrigin = `${x}px ${y}px`
-        img.style.transform = "scale(1.5)"
+        img.style.transform = "scale(1.2)"
     })
 
     box.addEventListener("mouseleave", (e) => {
@@ -61,3 +54,13 @@ boxes.forEach(box => {
     })
 
 })
+
+
+//Finalizar Pedido
+
+
+
+
+
+
+
