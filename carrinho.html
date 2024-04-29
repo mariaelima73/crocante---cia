@@ -40,13 +40,15 @@
         </nav>
     </section>
 
-    <section>
+    <h2 class="title-section">Carrinho</h2>
 
-        <h2 class="title-section">Carrinho</h2>
+    <div class="grade-cart">
+
+    <section>
         
         <table class="container-cart">
             
-            <thead>
+            <thead class="cart-aling">
                 <tr>
                 <th class="table-header-item first-col">Item</th>
                 <th class="table-header-item second-col">Preço</th>
@@ -55,7 +57,7 @@
             </thead>
 
             
-            <tbody>
+            <tbody class="cart-aling">
                 <tr class="cart-product">
                     <td class="">
                         <img src="" alt="" class="">
@@ -66,7 +68,7 @@
                         <span class="product-preco">R$ 129,99</span>
                     </td>
 
-                    <td>
+                    <td class="cart-quant">
                         <div class="container-quant-button">
                             <input type="number" value="1" min="0" class="quant-product">
                             <button type="button" class="remove-button">Remover</button>
@@ -84,7 +86,7 @@
                         <span class="product-preco">R$129,99</span>
                     </td>
 
-                    <td>
+                    <td class="cart-quant">
                         <div class="container-quant-button">
                             <input type="number" value="1" min="0" class="quant-product">
                             <button type="button" class="remove-button"> Remover</button>
@@ -116,16 +118,19 @@
         
         <div class="payment">
             <p class="for-payment">
-            <input type="radio" name="opção_payment">Boleto
-            <img src="" alt="boleto">
+            <input type="radio" name="opção_payment">
+            <label>BOLETO</label>
+            <img src="imagens/boleto-1-1-removebg-preview.svg" alt="boleto" class="img-payment">
             </p>
             <p class="for-payment">
-            <input type="radio" name="opção_payment">Cartão
-            <img src="" alt="cartão">
+            <input type="radio" name="opção_payment">
+            <label>CARTÃO</label>
+            <img src="imagens/cartoes.png" alt="cartão" class="img-payment1">
             </p>
             <p class="for-payment">
-            <input type="radio" name="opção_payment">Pix 
-            <img src="" alt="pix">
+            <input type="radio" name="opção_payment">
+            <label>PIX</label>
+            <img src="imagens/pix.png" alt="pix" class="img-payment">
             </p>
             
         </div>
@@ -135,7 +140,7 @@
     </section>
 
 
-
+    </div>
 
     
     <footer class="main-footer">

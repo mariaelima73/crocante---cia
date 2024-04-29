@@ -153,6 +153,18 @@ header {
     box-shadow: 5px 5px 5px rgba(77, 22, 22, 0.61);
 }
 
+.delivery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.delivery1 {
+    width: 250px;
+}
+.delivery2 {
+    width: 180px;
+}
 
 /*Página de PÃES*/
 
@@ -299,11 +311,9 @@ header {
     border: 2px solid  white;
     backdrop-filter: blur(8px);
     box-shadow: 10px 10px #422709;
-    margin: 10px;
-    width:600px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
+    width: 1150px;
+    height: auto;
+    margin-right: 100px;
 }
 
 .table-header-item {
@@ -328,13 +338,12 @@ header {
 
 .container-quant-button {
     display: flex;
-    flex-direction: column;
-    margin-left: 70px;
+    margin-left: auto;
     
 }
 
 .quant-product {
-    width: 200px;
+    width: 25px;
     font-family: "Platypi", cursive;
     font-size: 18px;
     text-align: center;
@@ -344,7 +353,7 @@ header {
 
 .remove-button {
     text-align: center;
-    width: 210px;
+    width: 100px;
     font-family: "Platypi", cursive;
     font-size: 18px;
     background-color: var(--red);
@@ -374,11 +383,8 @@ header {
     border: 2px solid  white;
     backdrop-filter: blur(8px);
     box-shadow: 10px 10px #422709;
-    margin: 30px;
-    width: 580px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 280px;
+    width: 270px;
+    height: auto;
 }
 
 .payment {
@@ -392,7 +398,7 @@ header {
 }
 
 .purchase-button {
-    width: 300px;
+    width: 270px;
     height: 50px;
     font-family: "Platypi", cursive;
     font-size: 20px;
@@ -400,10 +406,31 @@ header {
     text-transform: uppercase;
     background-color: rgb(6, 148, 6);
     box-shadow: 5px 5px 5px var(--marron1);
-    margin-left: 143px;
     border: 0;
 }
 
+.img-payment {
+    width: 100px;
+}
+.img-payment1 {
+    width: 100px;
+    padding: 10px;
+}
+.for-payment {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.grade-cart {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.cart-aling {
+    display: flex;
+    flex-direction: column
+}
+.cart-quant {
+    padding-left: 770px;
 
-
-
+}
