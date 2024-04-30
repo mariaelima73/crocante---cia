@@ -44,52 +44,53 @@
 
     <div class="grade-cart">
 
-    <section>
-        
         <table class="container-cart">
             
-            <thead class="cart-aling">
+            <thead>
                 <tr>
-                <th class="table-header-item first-col">Item</th>
-                <th class="table-header-item second-col">Preço</th>
-                <th class="table-header-item third-col">Quantidade</th>
+                <th class="table-header-item product-header">Item</th>
+                <th class="table-header-item preco-header">Preço</th>
+                <th class="table-header-item quant-header">Quantidade</th>
                 </tr>
             </thead>
 
-            
-            <tbody class="cart-aling">
+            <tbody>
                 <tr class="cart-product">
-                    <td class="">
+                    <td class="product">
                         <img src="" alt="" class="">
-                        <strong class="product-title">Produto</strong>
+                        <strong>Produto</strong>
                     </td>
                     
-                    <td class="">
-                        <span class="product-preco">R$ 129,99</span>
+                    <td class="product-preco">
+                        <span>R$ 129,99</span>
                     </td>
 
                     <td class="cart-quant">
-                        <div class="container-quant-button">
-                            <input type="number" value="1" min="0" class="quant-product">
+                        <div class="quant-product">
+                            <input type="number" value="1" min="1" max="20" class="quant-product">
+                        </div>
+                        <div class="remove-button">
                             <button type="button" class="remove-button">Remover</button>
                         </div>
                     </td>
                 </tr>
 
                 <tr class="cart-product">
-                    <td class="">
+                    <td class="product">
                         <img src="" alt="" class="">
-                        <strong class="product-title">Produto</strong>
+                        <strong>Produto</strong>
                     </td>
 
-                    <td> 
-                        <span class="product-preco">R$129,99</span>
+                    <td class="product-preco"> 
+                        <span>R$129,99</span>
                     </td>
 
                     <td class="cart-quant">
-                        <div class="container-quant-button">
-                            <input type="number" value="1" min="0" class="quant-product">
-                            <button type="button" class="remove-button"> Remover</button>
+                        <div class="quant-product">
+                            <input type="number" value="1" min="1" max="20" class="quant-product">
+                        </div>
+                        <div class="remove-button">
+                            <button type="button" class="remove-button">Remover</button>
                         </div>
                     </td>
                 </tr>
@@ -110,34 +111,31 @@
             </tfoot>
         </table>
 
-    </section>
 
-
-    <section class="container-payment">
-        <h3>Forma de pagamento:</h3>
-        
-        <div class="payment">
-            <p class="for-payment">
-            <input type="radio" name="opção_payment">
-            <label>BOLETO</label>
-            <img src="imagens/boleto-1-1-removebg-preview.svg" alt="boleto" class="img-payment">
-            </p>
-            <p class="for-payment">
-            <input type="radio" name="opção_payment">
-            <label>CARTÃO</label>
-            <img src="imagens/cartoes.png" alt="cartão" class="img-payment1">
-            </p>
-            <p class="for-payment">
-            <input type="radio" name="opção_payment">
-            <label>PIX</label>
-            <img src="imagens/pix.png" alt="pix" class="img-payment">
-            </p>
+        <section class="container-payment">
+            <h3 class="title-payment">Forma de pagamento:</h3>
             
-        </div>
-        
-        
-        <button type="button" class="purchase-button">Finalizar compra</button>
-    </section>
+            <div class="payment">
+                <p class="for-payment">
+                <input type="radio" name="opção_payment">
+                <label>BOLETO</label>
+                <img src="imagens/boleto-1-1-removebg-preview.svg" alt="boleto" class="img-payment">
+                </p>
+                <p class="for-payment">
+                <input type="radio" name="opção_payment">
+                <label>CARTÃO</label>
+                <img src="imagens/cartoes.png" alt="cartão" class="img-payment1">
+                </p>
+                <p class="for-payment">
+                <input type="radio" name="opção_payment">
+                <label>PIX</label>
+                <img src="imagens/pix.png" alt="pix" class="img-payment">
+                </p>
+                
+            </div>
+            
+            <button type="button" class="purchase-button">Finalizar compra</button>
+        </section>
 
 
     </div>
