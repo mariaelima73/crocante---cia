@@ -24,36 +24,15 @@ var catBebidas = document.getElementById('catBeb')
         location.href = 'http://127.0.0.1:5500/bebidas.html'
     }
 
+//Página sobre
 
-//Fazer a imagem aumentar quando passar o mouse
+let transicao = document.getElementById("sobre")
 
-const boxes = document.querySelectorAll(".box-img")
+    function entrar() {
+        entrar.addEventListener('mouseenter')
+        transicao.style.animation = "fadeIn 5s ease-out"
 
-//Iteração sobre cada elemento box
-
-boxes.forEach(box => {
-    //Encontrar o elemento img dentro do elemento box atual
-    const img = box.querySelector(".img")
-
-    //Adicionar os ouvintes de eventos ao elemento box atual
-    box.addEventListener("mousemove", (e) => {
-
-        const x = e.clientX - box.getBoundingClientRect().left
-        const y = e.clientY - box.getBoundingClientRect().top
-
-        console.log(x, y)
-
-        img.style.transformOrigin = `${x}px ${y}px`
-        img.style.transform = "scale(1.2)"
-    })
-
-    box.addEventListener("mouseleave", (e) => {
-
-        img.style.transformOrigin = "center"
-        img.style.transform = "scale(1)"
-    })
-
-})
+    }
 
 
 //Finalizar Pedido

@@ -13,15 +13,14 @@
 
 body {
     background-image: url(imagens/fundo-index2.png);
-    background-size: 100%;
+    background-size: 1500px;
     font-family: "Platypi", cursive;
 }
 
 header {
-    background-image: url(imagens/header12.jpg);
+    background-image: url(imagens/header12.png);
     background-size: 100%;
     background-position: start;
-    border-radius: 8px;
     background-repeat: no-repeat;
     box-shadow: 5px 5px 8px rgba(80, 23, 23, 0.788);
     display: flex;
@@ -80,7 +79,7 @@ header {
 .container {
     padding: 10px;
     background: transparent;
-    border: 2px solid  white;
+    border: 2px solid  #edd1a1;
     backdrop-filter: blur(8px);
     box-shadow: 10px 10px #422709;
     margin: 10px;
@@ -154,6 +153,16 @@ header {
     box-shadow: 5px 5px 5px rgba(77, 22, 22, 0.61);
 }
 
+/*.sobre {
+    animation: fadeIn 3s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}*/
+
+
 .delivery {
   display: flex;
   justify-content: center;
@@ -192,7 +201,7 @@ header {
     font-size: 25px;
     width: 130px;
     text-align: center;
-    border: 2px solid  white;
+    border: 2px solid  #edd1a1;
     background-color: #f6e6cc;
     backdrop-filter: blur(8px);
     box-shadow: 6px 6px #422709;
@@ -205,7 +214,7 @@ header {
     font-size: 22px;
     padding: 10px;
     background: transparent;
-    border: 2px solid  white;
+    border: 2px solid  #edd1a1;
     backdrop-filter: blur(8px);
     box-shadow: 10px 10px #422709;
     margin: 5px;
