@@ -26,14 +26,12 @@ var catBebidas = document.getElementById('catBeb')
 
 //Página sobre
 
-let transicao = document.getElementById("sobre")
+//---------------------------------------------------------------------
 
     function entrar() {
-        entrar.addEventListener('mouseenter')
-        transicao.style.animation = "fadeIn 5s ease-out"
-
+        document.getElementById("sobre")
+        sobre.style.opacity = 1;
     }
-
 
 //Finalizar Pedido
 

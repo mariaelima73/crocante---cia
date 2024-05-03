@@ -24,24 +24,29 @@
         <nav class="main">    
             <ul class="list">
                 <li>
-                    <button class="category" id="catPaes" type="button" value="Pães" onclick="clicarPaes()">Pães</button>
+                    <button class="category" id="catPaes" type="button" value="PÃES" onclick="clicarPaes()">Pães</button>
                 </li>
                 <li>
-                    <button class="category" id="catDoc" type="button" value="Doces" onclick="clicarDoces()">Doces</button>
+                    <button class="category" id="catDoc" type="button" value="DOCES" onclick="clicarDoces()">Doces</button>
                 </li>
                 <li>
-                    <button class="category" id="catBeb" type="button" value="Bebidas" onclick="clicarBebidas()">Bebidas</button>
+                    <button class="category" id="catBeb" type="button" value="BEBIDAS" onclick="clicarBebidas()">Bebidas</button>
                 </li>
                 <li></li><a href="carrinho.html"><img src="imagens/carrinho.png" alt="carrinho" class="carrinho"></a></li>
             </ul>     
         </nav>
     </div>
 
-    <h2 class="title-section">Salgados</h2>
+    <!--Produtos-->
+
+    <div class="title-container">
+        <h2 class="title-section">Salgados</h4>
+    </div>
+
 
     <div class="grade">
         <div class="container-product">
-            <h4>Bolinha de Queijo</h4>
+            <h4>BOLINHA DE QUEIJO</h4>
             <div class="box-img">
                 <img src="imagens/bolinha-queijo.jpg" alt="produto" class="img">
             </div>
@@ -55,11 +60,11 @@
                 </div>
                 <div class="options">
                     <p>
-                        <input type="radio" name="opção" checked>
+                        <input type="radio" name="opção" value="cheedar" checked>
                         <label>Cheedar</label>
                     </p>
                     <p>
-                        <input type="radio" name="opção">
+                        <input type="radio" name="opção" value="parmesão"> 
                         <label>Parmesão</label>
                     </p>                    
                     </div>
@@ -70,7 +75,7 @@
         </div>
         
         <div class="container-product">
-            <h4>Coxinha</h4>
+            <h4>COXINHA</h4>
             <div>
                 <img src="imagens/coxinha.jpg" alt="produto" class="img">
             </div>
@@ -84,11 +89,11 @@
                 </div>
                 <div class="options">
                 <p>
-                    <input type="radio" name="opção" checked>
+                    <input type="radio" name="opção1" value="carne" checked>
                     <label>Carne</label>
                 </p>
                 <p>
-                    <input type="radio" name="opção">
+                    <input type="radio" name="opção1" value="frango">
                     <label>Frango</label>
                 </p>
                 </div>
@@ -100,7 +105,7 @@
         </div>
         
         <div class="container-product">
-            <h4>Enroladinho</h4>
+            <h4>ENROLADINHO</h4>
             <img src="imagens/enroladinho.jpg" alt="produto" class="img">
             <div class="container-description">    
                 <p class="description">
@@ -113,21 +118,21 @@
                 <div class="options3">
                     <div class="options2">
                         <p>
-                            <input type="radio" name="opção" checked>
+                            <input type="radio" name="opção2" value="misto" checked>
                             <label></label>Misto
                         </p>
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção2" value="carne">
                             <label>Carne</label>
                         </p>
                     </div>
                     <div class="options2">
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção2" value="salsicha">
                             <label>Salsicha</label>
                         </p>
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção2" value="calabresa">
                             <label>Calabresa</label>
                         </p>
                     </div>
@@ -153,21 +158,21 @@
                 <div class="options3">
                     <div class="options2">
                         <p>
-                            <input type="radio" name="opção" checked>
+                            <input type="radio" name="opção3" value="misto" checked>
                             <label>Misto</label>
                         </p>
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção3" value="carne">
                             <label>Carne</label>
                         </p>
                     </div>
                     <div class="options2">
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção3" value="salsicha">
                             <label>Salsicha</label>
                         </p>
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção3" value="frango">
                             <label>Frango</label>
                         </p>
                     </div>
@@ -192,20 +197,20 @@
                 <div class="options3">
                     <div class="options2">
                         <P>
-                            <input type="radio" name="opção" checked>
+                            <input type="radio" name="opção4" value="misto" checked>
                             <label>Misto</label>
                         </p>    
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção4" value="mortadela">
                             <label>Mortadela</label>
                         </p>
                     </div>
                     <div class="options2">
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção4" value="frango">
                             <label>Frango</label>
                         </p>
                         <p>
-                            <input type="radio" name="opção">
+                            <input type="radio" name="opção4" value="carne">
                             <label>Carne</label>
                         </p>
                     </div>
@@ -230,25 +235,25 @@
             <div class="options3">
                 <div class="options2">
                     <p>
-                        <input type="radio" name="opção" checked>
+                        <input type="radio" name="opção5" value="presunto" checked>
                         <label>Presunto</label>
                     </p>
                     <p>
-                        <input type="radio" name="opção">
+                        <input type="radio" name="opção5" value="carne">
                         <label>Carne</label>
                     </p>
                     <p>
-                        <input type="radio" name="opção">
+                        <input type="radio" name="opção5" value="pizza">
                         <label>Pizza</label>
                     </p>
                 </div>
                 <div class="options2">
                     <p>
-                        <input type="radio" name="opção">
+                        <input type="radio" name="opção5" value="queijo">
                         <label>Queijo</label>
                     </p>
                     <p>
-                        <input type="radio" name="opção">
+                        <input type="radio" name="opção5" value="calabresa">
                         <label>Calabresa</label>
                     </p>
                 </div>
@@ -262,7 +267,7 @@
 
     <footer class="main-footer">
         <div class="main-footer-container">
-            <h3 class="footer-tittle">@Copywriting | Crocante & Cia 2024 </h3>
+            <img src="imagens/footer.png" class="img-footer">
             <ul class="list-container">
                 <li class="footer-item">
                     <a href="https://www.facebook.com/" target="_black"><img src="imagens/facebook.svg" alt="facebook-logo"></a>
