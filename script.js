@@ -26,12 +26,37 @@ var catBebidas = document.getElementById('catBeb')
 
 //Página sobre
 
-//---------------------------------------------------------------------
+//Transição no SOBRE---------------------
 
     function entrar() {
         document.getElementById("sobre")
         sobre.style.opacity = 1;
     }
+
+//Mudança de imagem no footer 
+
+
+function trocarImagem() {
+    var imagem = document.getElementById('img-footer');
+
+    // Verifica a largura da tela
+    var larguraDaTela = document.getElementById('main-footer-container').style.width;
+
+    // Se a largura da tela for menor que 600 pixels, troca a imagem
+    if (larguraDaTela < 600) {
+        imagem.src = "imagens/footer2.png";
+    } else {
+        imagem.src = "imagens/footer.png";
+    }
+    window.addEventListener('resize', trocarImagem);
+}
+
+// Chama a função trocarImagem quando o tamanho da tela é alterado
+
+
+
+    
+
 
 //Finalizar Pedido
 
