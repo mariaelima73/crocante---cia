@@ -1,5 +1,7 @@
 //INÍCIO JAVASCRIPT
 
+// Função ir para página quando clicar na categoria
+
 var catPaes = document.getElementById('catPaes')
 
     function clicarPaes(){
@@ -35,30 +37,25 @@ var catBebidas = document.getElementById('catBeb')
 
 //Mudança de imagem no footer 
 
-
 function trocarImagem() {
-    var imagem = document.getElementById('img-footer');
-
     // Verifica a largura da tela
-    var larguraDaTela = document.getElementById('main-footer-container').style.width;
-
+    var largura = window.screen.width;
     // Se a largura da tela for menor que 600 pixels, troca a imagem
-    if (larguraDaTela < 600) {
-        imagem.src = "imagens/footer2.png";
+    if (largura < 600) {
+        document.getElementById('img-footer').src = 'imagens/footer2.png';
     } else {
-        imagem.src = "imagens/footer.png";
+        document.getElementById('img-footer').src = 'imagens/footer.png';
     }
-    window.addEventListener('resize', trocarImagem);
 }
-
 // Chama a função trocarImagem quando o tamanho da tela é alterado
+window.addEventListener('resize', trocarImagem);
 
-
-
-    
+//TRANSIÇÃO SOBRE MOBILE
 
 
 //Finalizar Pedido
+
+
 
 
 

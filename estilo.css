@@ -168,9 +168,23 @@ header {
 }
 
 .sobre {
-    opacity: 0;
-    transition: opacity 0.5s;
+    animation: wipe-in-down 3s ease-out;
 }
+
+@keyframes wipe-in-down {
+    from {
+      clip-path: inset(0 0 100% 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:down"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-down both;
+  }
+
+
 
 .delivery {
   display: flex;
@@ -465,89 +479,309 @@ h4 {
 
 @media (max-width: 768px) {
     .img-footer {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: 700px;
-        align-items: center;
-        margin-top: 10px;
-    
+        width: 650px;
     }
     .title-container {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        background-color: #f6e6cc;
         height: 80px;
         width: 500px;
-        backdrop-filter: blur(10px);
-        border-radius: 1px;
     }
 }
+@media (max-width: 650px) {
+    .img-footer {
+        width: 600px;
+    }
+    .title-container {
+        height: 80px;
+        width: 500px;
+    }
+    .list {
+        width: 520px;
+    }
+
+    .main{
+        width: 540px;
+    }
+    .img-footer {
+        width: 560px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 250px;
+    }  
+
+    .category{
+        font-size: 18px;
+        width: 110px;
+    }
+    .title-section{
+        font-size: 22px;
+    }
+
+    .list {
+        width: 520px;
+    }
+
+    .main{
+        width: 540px;
+    }
+
+    .title-container {
+        width: 500px;
+        height: 80px;
+    }
+
+    .container-product {
+        font-size: 22px;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+
+    .options {
+        font-size: 18px;
+        margin-left: 100px;
+    }
+
+    .options2 {
+        font-size: 18px;
+    }
+
+    .options3 {
+        padding-left: 50px;
+    }
+
+    .footer-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-title {
+        font-size: 25px;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 220px;
+    }
+
+    .about-image1 {
+        width: 150px;
+        height: 220px;
+    }
+
+    .weabout {
+        font-size: 18px;
+    }
+
+    .delivery1 {
+        width: 190px;
+    }
+
+    .delivery2 {
+        width: 120px;
+        margin: 17px;
+    }
+    .img-footer {
+        width: 560px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .logo {
+        width: 250px;
+    }  
+
+    .category{
+        font-size: 18px;
+        width: 110px;
+    }
+    .title-section{
+        font-size: 22px;
+    }
+
+    .list {
+        width: 520px;
+    }
+
+    .main{
+        width: 540px;
+    }
+
+    .title-container {
+        width: 500px;
+        height: 80px;
+    }
+
+    .container-product {
+        font-size: 22px;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+
+    .options {
+        font-size: 18px;
+        margin-left: 100px;
+    }
+
+    .options2 {
+        font-size: 18px;
+    }
+
+    .options3 {
+        padding-left: 50px;
+    }
+
+    .footer-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-title {
+        font-size: 25px;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 220px;
+    }
+
+    .about-image1 {
+        width: 150px;
+        height: 220px;
+    }
+
+    .weabout {
+        font-size: 18px;
+    }
+
+    .delivery1 {
+        width: 190px;
+    }
+
+    .delivery2 {
+        width: 120px;
+        margin: 17px;
+    }
+    .img-footer {
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+   
+    .list {
+        width: 450px;
+        margin-left: 13px;
+    }
+    .main {
+        width: 480px;
+    }
+    .title-container {
+        width: 480px;
+        height: 50px;
+    }
+    .img-footer {
+        width: 450px;
+    }
+}    
+
 
 @media (max-width: 425px) {
     /*Página Index*/
     
     .logo {
-        width: 170px;
-    }
-
-    .subtitle {
-        font-size: 25px;
-    }
-
-    .title-section {
-        font-size: 23px;
-    }
-
-    .about-title {
-        font-size: 22px;
-        margin: 8px 0;
-    }
-
-    .about-image {
         width: 200px;
-        height: 300px;
+    }  
+
+    .category{
+        font-size: 15px;
+        width: 90px;
+    }
+    .title-section{
+        font-size: 18px;
     }
 
-    .about-image1 {
-        width: 180px;
-        height: 300px;
+    .main {
+        width: 390px;
     }
 
-    .weabout {
-        text-align: justify;
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 22px;
-        background: transparent;
-        backdrop-filter: blur(1px);
-        padding: 10px;
-        color: #201304;
-
+    .list {
+        width: 370px;
+        margin-left: 10px;
     }
 
-    .delivery1 {
-        width: 200px;
-        margin: 20px 0;
+    .title-container {
+        width: 360px;
+        height: 60px;
     }
 
-    .delivery2 {
-        width: 150px;
+    .container-product {
+        font-size: 20px;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+
+    .options {
+        font-size: 16px;
+        margin-left: 110px;
+    }
+
+    .options2 {
+        font-size: 16px;
+    }
+
+    .options3 {
+        padding-left: 50px;
     }
 
     .img-footer {
-        
+        width: 350px;
+        margin-top: 10px;
     }
 
-    /*Pagina PÃES*/
-
-    .title-container {
-        width: 420px;
-        height: 80px;
+    .footer-item img {
+        width: 20px;
+        height: 20px;
     }
 
+    .about-title {
+        font-size: 25px;
+    }
+
+    .about-image {
+        width: 150px;
+        height: 220px;
+    }
+
+    .about-image1 {
+        width: 150px;
+        height: 220px;
+    }
+
+    .weabout {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .delivery1 {
+        width: 140px;
+    }
+
+    .delivery2 {
+        width: 110px;
+        margin: 17px;
+    }
+    .img-footer {
+        width: 400px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -564,6 +798,10 @@ h4 {
     }
 
     .list {
+        width: 330px;
+    }
+
+    .main{
         width: 350px;
     }
 
@@ -629,6 +867,9 @@ h4 {
         width: 110px;
         margin: 17px;
     }
+    .img-footer {
+        width: 300px;
+    }
 }
 @media (max-width: 320px) {
     .logo {
@@ -648,6 +889,10 @@ h4 {
     }
 
     .list {
+        width: 270px;
+    }
+
+    .main{
         width: 300px;
     }
 
@@ -707,5 +952,8 @@ h4 {
     .delivery2 {
         width: 90px;
         margin: 17px;
+    }
+    .img-footer {
+        width: 240px;
     }
 }
