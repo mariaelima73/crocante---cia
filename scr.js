@@ -1,21 +1,12 @@
-//var catDoc = document.getElementById('catDoc')
+var catDoc = document.getElementById('catDoc')
+var pagdc = document.getElementById('doce')
 
-   // function clicarDoces() {
-   //     var URL = "http://127.0.0.1:5500/dc.html"
-        
-    //    document.getElementById('doce').innerHTML = str.link(URL)
+catDoces.addEventListener("click", clicarDoces)
 
-  //  }
-
-
-  document.querySelectorAll('button').forEach(link => {
-    const doce = document.getElementById('doce')
+   function clicarDoces() {
     
-    link.onclick = function(e) {
-        e.preventDefault()
-        fetch(link.href)
-        .then(resp => resp.text())
-        .then(html => conteudo.innerHTML = 'http://127.0.0.1:5500/dc.html')
-    }
-})
+    pagdc.src = 'http://127.0.0.1:5500/doces.html'
+    
+   }
+
     

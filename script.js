@@ -1,39 +1,71 @@
 //INÍCIO JAVASCRIPT
 
-// Função ir para página quando clicar na categoria
+//const catPaes = document.getElementById('catPaes')
+//let pagPaes 
 
-var catPaes = document.getElementById('catPaes')
+   // function clicarPaes() {
 
-    function clicarPaes(){
-        location.href = 'http://127.0.0.1:5500/paes.html'
+     //   location.href = 'menu.html#'
+
+      //  pagPaes.src = 'paes.html#'
+        
+   // }
+
+//Página Home
+
+var catPaes2 = document.getElementById('catPaes')
+var pagpa = document.getElementById('paes')
+var catDoces2 = document.getElementById('catDoc')
+var pagdc = document.getElementById('doces')
+var catSalg2 = document.getElementById('catSalg')
+var pagsl = document.getElementById('salgados')
+var catBeb2 = document.getElementById('catBeb')
+var pagbb = document.getElementById('bebidas')
+
+catPaes2.addEventListener("click", clicarPaes)
+catDoces2.addEventListener("click", clicarDoces)
+catSalg2.addEventListener("click", clicarSalgados)
+catBeb2.addEventListener("click", clicarBebidas)
+
+
+    let menu = document.getElementById('catPaes')
+
+    function clicarMenu () {
+        location.href = 'menu.html'
+     
+            var catPaes2 = document.getElementById('catPaes')
+            var pagpa = document.getElementById('paes')
+            catPaes2.addEventListener("click", clicarPaes)
+            pagdc.src = 'paes.html'
+           
     }
 
-var catDoces = document.getElementById('catDoc')
 
-    function clicarDoces(){
-        location.href = 'http://127.0.0.1:5500/doces.html'
-    }
+//Rodando html dentro do html iframe
 
-var catSalgados = document.getElementById('catSalg')
+   function clicarPaes() {
 
-    function clicarSalgados(){
-        location.href = 'http://127.0.0.1:5500/salgados.html'
-    }
+    pagdc.src = 'paes.html'
+   }
 
-var catBebidas = document.getElementById('catBeb')
+   function clicarDoces() {
+    
+    pagdc.src = 'doces.html'
+   }
+   
+   function clicarSalgados() {
 
-    function clicarBebidas(){
-        location.href = 'http://127.0.0.1:5500/bebidas.html'
-    }
+    pagdc.src = 'salgados.html'
+   }
 
-//Página sobre
+   function clicarBebidas() {
+    
+    pagdc.src = 'bebidas.html'
+   }
 
-//Transição no SOBRE---------------------
 
-    function entrar() {
-        document.getElementById("sobre")
-        sobre.style.opacity = 1;
-    }
+
+
 
 //Mudança de imagem no footer 
 
@@ -50,16 +82,20 @@ function trocarImagem() {
 // Chama a função trocarImagem quando o tamanho da tela é alterado
 window.addEventListener('resize', trocarImagem);
 
-//TRANSIÇÃO SOBRE MOBILE
 
 
-//Finalizar Pedido
+// Função ir para página quando clicar na categoria
 
+//var catPaes = document.getElementById('catPaes')
 
+    //function clicarPaes(){
+    //    location.href = 'http://127.0.0.1:5500/paes.html'
+    //}
+//Transição no SOBRE---------------------
 
-
-
-
-
+  //  function entrar() {
+   //     document.getElementById("sobre")
+   //     sobre.style.opacity = 1;
+  //  }
 
 

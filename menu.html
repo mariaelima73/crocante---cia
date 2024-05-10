@@ -11,15 +11,7 @@
 <link href="estilo.css" rel="stylesheet">
 <link rel="shotcut icon" href="imagens/favicon.ico" type="image/x-icon">
 <title>Menu - Crocante & Cia</title>
-
-<style>
-    .teste {
-        background-color: white;
-    }
-</style>
-
 </head>
-
     <header>
         <nav>
             <div class="logotipo">
@@ -32,19 +24,24 @@
         <nav class="main">    
             <ul class="list">
                 <li>
+                    <button class="category" id="catPaes" type="button" value="PÃES" onclick="clicarPaes()">Pães</button>
+                </li>
+                <li>
                     <button class="category" id="catDoc" type="button" value="Doces" onclick="clicarDoces()">Doces</button>
                 </li>
-                <!--<li><a href="carrinho.html"><img src="imagens/carrinho.png" alt="carrinho" class="carrinho" onclick="clicarCarrinho()"></a></li>
-                <li><button img src="imagens/carrinho.png" alt="carrinho" class="carrinho" id="car" onclick="clicarCarrinho()"></button></li>
-            como colocar imagem no botão-->
+                <li>
+                    <button class="category" id="catSalg" type="button" value="Salgados" onclick="clicarSalgados()">Salgados</button>
+                </li>
+                <li>
+                    <button class="category" id="catBeb" type="button" value="Bebidas" onclick="clicarBebidas()">Bebidas</button>
+                </li>
             </ul>
-                    
         </nav>
     </div>
 
-    <div class="teste" id="doce">
-        
-    </div>
+    
+    <iframe src="" frameborder="0" id="doces" id="paes" id="salgados" id="bebidas" style="height: 800px; width: 100%;">
+    </iframe>
 
     <footer class="main-footer">
         <div class="main-footer-container">
@@ -69,8 +66,7 @@
         </div>
     </footer>
 
-    <script src="scr.js">
-    
+    <script src="script.js">
 
     </script>
 
