@@ -1,12 +1,14 @@
-var catDoc = document.getElementById('catDoc')
-var pagdc = document.getElementById('doce')
 
-catDoces.addEventListener("click", clicarDoces)
+const botaoVoltarAoTopo = document.getElementById('voltarAoTopo')
 
-   function clicarDoces() {
-    
-    pagdc.src = 'http://127.0.0.1:5500/doces.html'
-    
-   }
+botaoVoltarAoTopo.addEventListener('click', () => {
+    scrollTo({top: 0, behavior: 'smooth'})
+})
 
-    
+addEventListener('scroll', () => {
+    if (scrollY > 100) {
+        botaoVoltarAoTopo.style.display = 'block';
+    } else {
+        botaoVoltarAoTopo.style.display = 'none';
+    }
+})
