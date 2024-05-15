@@ -25,26 +25,33 @@
     <p class="subtitle">A melhor padaria da região</p>
 
     <div class="grade">
-     
-        <section class="container" id="catPaes" onclick="clicarMenu1()">
+
+        <section class="container" id="catPaes" onclick="redirecionar('iframe1')">
             <h2 class="title-section">PÃES</h2>
-            <img src="imagens/paes-cereais.png" alt="pão" class="img">
+            
+            <div class="carrossel">
+                <div class="container-carrosel" id="imgcarrosel">
+                    <img src="imagens/paes-cereais.png" alt="pão" class="img">
+                    <img src="imagens/pao-baguete.jpg" alt="pão" class="img">
+                    <img src="imagens/pao-crocante.jpg" alt="pão" class="img">
+                </div>
+            </div>      
         </section>
 
 
-        <section class="container" id="catDoces" onclick="clicarMenu2()">
+        <section class="container" id="catDoces" onclick="redirecionar('iframe2')">
             <h2 class="title-section">DOCES</h2>
             <img src="imagens/doce.png" alt="doce" class="img">
         </section>
 
 
-        <section class="container" id="catSalgados" onclick="clicarMenu3()">
+        <section class="container" id="catSalgados" onclick="redirecionar('iframe3')">
             <h2 class="title-section">SALGADOS</h2>
             <img src="imagens/salgado.png" alt="salgado" class="img">
         </section>
 
 
-        <section class="container" id="catBebidas" onclick="clicarMenu4()">
+        <section class="container" id="catBebidas" onclick="redirecionar('iframe4')">
             <h2 class="title-section">BEBIDAS</h2>
             <img src="imagens/bebidas.png" alt="bebidas" class="img">
         </section>
@@ -110,10 +117,9 @@
     <img src="imagens/arrow_up.png" alt="arrow up" class="scroll">
 </button>
 
-<script src="script.js" defer>
+<script src="script1.js" defer></script>
 
-
-</script>
+<script src="script2.js" defer></script>
 
 </body>
 </html>
