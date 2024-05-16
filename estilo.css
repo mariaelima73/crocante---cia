@@ -97,22 +97,34 @@ header {
 }
 
 /*Carrosel HOME*/
-
 .carrossel {
-    overflow: hidden;
-    width: 400px;
+    max-width: 500px;
+    position: relative;
+    margin: auto;
 }
 
-.container-carrosel {
-    display: flex;
-    transform: translateX(0);
-    transition: transform 0.8s ease-in-out;
+.carrossel-item {
+    display: none;
 }
 
-#imgcarrosel {
-    object-fit: cover;
-    width: 400px;
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
+
+@keyframes fade {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+  
+  [transition-style="in:wipe:right"] {
+    animation: 2.0s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+  }
+
 
 /*--------------------------------*/
 
@@ -289,6 +301,12 @@ textarea.contact-field{
     padding: 10px;
     max-width: 600px;
     box-shadow: 5px 5px 8px var(--marron2);
+}
+
+.map{
+    width: 600px; 
+    height: 450px;
+    border:0;
 }
 
 .resolucao {
@@ -623,6 +641,7 @@ h4 {
     }
 }
 
+
 @media (max-width: 600px) {
     .logo {
         width: 250px;
@@ -708,6 +727,14 @@ h4 {
         width: 500px;
         height: 250px;
     }
+    .contact-map {
+        max-width: 500p;
+    }
+    .map{
+        width: 550px; 
+        height: 450px;
+        border:0;
+    }
 }
 
 
@@ -792,6 +819,14 @@ h4 {
     .img-footer {
         width: 450px;
     }
+    .contact-map {
+        max-width: 500p;
+    }
+    .map{
+        width: 450px; 
+        height: 450px;
+        border:0;
+    }
 }
 
 @media (max-width: 500px) {
@@ -817,6 +852,14 @@ h4 {
     .delivery2 {
         width: 120px;
         margin: 17px;
+    }
+    .contact-map {
+        max-width: 400p;
+    }
+    .map{
+        width: 400px; 
+        height: 250px;
+        border:0;
     }
 }    
 
@@ -911,6 +954,14 @@ h4 {
     .img-footer {
         width: 350px;
     }
+    .contact-map {
+        max-width: 500p;
+    }
+    .map{
+        width: 350px; 
+        height: 250px;
+        border:0;
+    }
 }
 
 @media (max-width: 375px) {
@@ -998,6 +1049,14 @@ h4 {
     }
     .img-footer {
         width: 300px;
+    }
+    .contact-map {
+        max-width: 500p;
+    }
+    .map{
+        width: 300px; 
+        height: 250px;
+        border:0;
     }
 }
 @media (max-width: 320px) {
