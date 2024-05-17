@@ -81,7 +81,7 @@
         
         <div class="container-product">
             <h4 class="product-title">Torrada</h4>
-            <img src="imagens/fatias-de-pao-fresco-branco-e-marrom-em-fundo-de-marmore.jpg" alt="produto" class="img">
+            <img src="imagens/fatias-de-pao.jpg" alt="produto" class="img">
             <div class="container-description">
                 <p class="description">
                     Pacotes de torradas feita com ingredientes naturais.
@@ -92,9 +92,9 @@
                 </div>
             <div class="add-button">
                 <button class="button" id="button-buy" type="button"
-                    data-name="Torrada" data-price="7.99" data-image="imagens/fatias-de-pao-fresco-branco-e-marrom-em-fundo-de-marmore.jpg">Adicionar ao carrinho</button>
+                    data-name="Torrada" data-price="7.99" data-image="imagens/fatias-de-pao.jpg">Adicionar ao carrinho</button>
                 <button class="button" id="button-buy-now" type="button"
-                    data-name="Torrada" data-price="7.99" data-image="imagens/fatias-de-pao-fresco-branco-e-marrom-em-fundo-de-marmore.jpg">Comprar</button>
+                    data-name="Torrada" data-price="7.99" data-image="imagens/fatias-de-pao.jpg">Comprar</button>
             </div>
         </div>
         
@@ -141,8 +141,8 @@
     </div>
 
     <script>
-        //Carrinho
-    document.querySelectorAll('#button-buy').forEach(button => {
+    //Adicionar ao Carrinho
+    document.querySelectorAll('#button-buy, #button-buy-now').forEach(button => {
     button.addEventListener('click', function() {
         const product = {
             name: this.getAttribute('data-name'),
@@ -152,9 +152,7 @@
         window.parent.postMessage(product, '*'); /*usamos '*' como origem, o que permite qualquer origem.
         Em um ambiente de produção, você deve substituir '*' pelo domínio específico do seu site.*/
     });
-});
-
-
+    });
     </script>
 
 </body>

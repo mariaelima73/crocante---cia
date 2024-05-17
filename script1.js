@@ -1,7 +1,6 @@
 //INÍCIO JAVASCRIPT
 //------------------------------------------------------------
 // Do index para menu
-
 function redirecionar(iframeId) {
     // Redireciona para 2.html com o parâmetro do iframe que deve ser visível
     window.location.href = `menu.html?iframe=${iframeId}`;
