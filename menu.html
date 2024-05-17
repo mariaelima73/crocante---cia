@@ -40,66 +40,30 @@
     </div>
 
     <div>
-        <iframe src="doces.html" frameborder="0" id="iframe2" class="resolucao" height="1000px"></iframe>
-        <iframe src="paes.html" frameborder="0" id="iframe1" class="resolucao"></iframe>
-        <iframe src="bebidas.html" frameborder="0" id="iframe4" class="resolucao"></iframe>
-        <iframe src="salgados.html" frameborder="0" id="iframe3" class="resolucao"></iframe>
+        <iframe sandbox="allow-same-origin allow-scripts" src="paes.html" frameborder="0" id="iframe1" class="resolucao"></iframe>
+        <iframe sandbox="allow-same-origin allow-scripts" src="doces.html" frameborder="0" id="iframe2" class="resolucao"></iframe>
+        <iframe sandbox="allow-same-origin allow-scripts" src="bebidas.html" frameborder="0" id="iframe4" class="resolucao"></iframe>
+        <iframe sandbox="allow-same-origin allow-scripts" src="salgados.html" frameborder="0" id="iframe3" class="resolucao"></iframe>
     </div>
 
 <!--Tabela-->
 
     <div class="grade-cart">
 
-        <table class="container-cart">
+        <table class="container-cart" id="cart">
             
             <thead>
                 <tr>
-                <th class="table-header-item product-header">Item</th>
+                <th class="table-header-item product-header">Imagem</th>
+                <th class="table-header-item product-header">Produto</th>
                 <th class="table-header-item preco-header">Preço</th>
                 <th class="table-header-item quant-header">Quantidade</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr class="cart-product">
-                    <td class="product">
-                        <img src="" alt="" class="">
-                        <strong>Produto</strong>
-                    </td>
-                    
-                    <td class="product-preco">
-                        <span>R$ 129,99</span>
-                    </td>
 
-                    <td class="cart-quant">
-                        <div class="quant-product">
-                            <input type="number" value="1" min="1" max="20" class="quant-product">
-                        </div>
-                        <div class="remove-button">
-                            <button type="button" class="remove-button">Remover</button>
-                        </div>
-                    </td>
-                </tr>
 
-                <tr class="cart-product">
-                    <td class="product">
-                        <img src="" alt="" class="">
-                        <strong>Produto</strong>
-                    </td>
-
-                    <td class="product-preco"> 
-                        <span>R$129,99</span>
-                    </td>
-
-                    <td class="cart-quant">
-                        <div class="quant-product">
-                            <input type="number" value="1" min="1" max="20" class="quant-product">
-                        </div>
-                        <div class="remove-button">
-                            <button type="button" class="remove-button">Remover</button>
-                        </div>
-                    </td>
-                </tr>
             </tbody>
 
             <!--RODAPÉ DA TABELA-->
@@ -173,6 +137,8 @@
     </footer>
 
     <script src="script1.js" defer></script>
+    <script src="script3.js"defer></script>
+    <script src="script4.js" defer></script>
 
 </body>
 </html>

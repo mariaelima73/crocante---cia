@@ -479,6 +479,10 @@ h4 {
 
 /*TABELA CARRINHO*/
 
+input[type="number"] {
+    width: 60px;
+}
+
 .container-cart {
     padding: 10px;
     background: transparent;
@@ -514,7 +518,7 @@ h4 {
     align-items: center;
     padding: 10px;
 }
-.quant-product {
+.quant-product, .input-quant-product {
     width: 40px;
     font-family: "Platypi", cursive;
     font-size: 18px;

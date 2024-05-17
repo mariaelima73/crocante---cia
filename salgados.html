@@ -69,8 +69,10 @@
                     </p>                    
                     </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Comprar</button>
             </div>
         </div>
         
@@ -98,8 +100,10 @@
                 </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Comprar</button>
             </div>
 
         </div>
@@ -138,8 +142,10 @@
                     </div>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Comprar</button>
             </div>
 
         </div>
@@ -178,8 +184,10 @@
                     </div>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Comprar</button>
             </div>
         </div>
         
@@ -216,8 +224,10 @@
                     </div>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pão Crocante" data-price="4.99" data-image="imagens/pao-crocante.jpg">Comprar</button>
             </div>
         </div>
         
@@ -259,8 +269,10 @@
                 </div>
             </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button" value="Adicionar ao carrinho">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button" value="Adicionar ao carrinho">Comprar</button>
+                <button class="button" id="button-buy" type="button"
+                    data-name="Pastel" data-price="5.99" data-image="imagens/pastel.jpg">Adicionar ao carrinho</button>
+                <button class="button" id="button-buy-now" type="button"
+                    data-name="Pastel" data-price="5.99" data-image="imagens/pastel.jpg">Comprar</button>
             </div>
         </div>
     </div>
@@ -288,7 +300,20 @@
         </div>
     </footer>-->
 
-    <script src="script.js" defer>
+    <script defer>
+        //Carrinho
+    document.querySelectorAll('#button-buy').forEach(button => {
+    button.addEventListener('click', function() {
+        const product = {
+            name: this.getAttribute('data-name'),
+            price: this.getAttribute('data-price'),
+            image: this.getAttribute('data-image')
+        };
+        window.parent.postMessage(product, '*'); /*usamos '*' como origem, o que permite qualquer origem.
+        Em um ambiente de produção, você deve substituir '*' pelo domínio específico do seu site.*/
+    });
+});
+
     </script>
 
 </body>
