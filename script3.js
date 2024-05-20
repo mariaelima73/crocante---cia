@@ -133,13 +133,25 @@ finalizarCompra.addEventListener('click', function() {
             //e da o valor a variavel criada
             opcaoSelect = opcao.value
         }
-    })
 
-    if (totalGeral === 0){
-        alert('Adicione produtos ao carrinho para poder finalizar sua compra!')
-    } else if (opcaoSelect === 'boleto' || 'cartão' || 'pix'){
-            var orderNumber = Math.floor(10000000 + Math.random() * 90000000)
-            alert(`Sua compra foi finalizada, seu pedido é o número ${orderNumber}. Agradecemos a preferência e aguardamos o seu retorno.`)
-        limparCarrinho()
-    }
-})
+        function alertFinalizar(){
+            const cart = document.getElementById('cart').getElementsByTagName('tbody')[0];
+            let totalGeral = 0
+            Array.from(cart.getElementsByTagName('tr')).forEach(row => {
+            const quantityInput = row.querySelector('input[type="number"]')
+            const quantity = parseInt(quantityInput.value)
+            const priceText = row.querySelector('td:nth-child(3)').textContent.replace('R$', '').replace(',', '.')
+            const price = parseFloat(priceText)
+            totalGeral += price * quantity
+                if (quantity < 1 || totalGeral < 1){
+                    alert('Adicione produtos ao carrinho para poder finalizar sua compra!')
+                } else if (opcaoSelect === 'boleto' || 'cartão' || 'pix'){
+                var orderNumber = Math.floor(10000000 + Math.random() * 90000000)
+                alert(`Sua compra foi finalizada, seu pedido é o número ${orderNumber}. Agradecemos a preferência e aguardamos o seu retorno.`)
+                limparCarrinho()
+                updateTotalGeral()}
+            })}
+})})
+
+
+    

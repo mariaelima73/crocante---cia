@@ -96,44 +96,7 @@ header {
     border-radius: 5px;
 }
 
-/*Carrosel HOME*/
 
-#carrossel {
-    width: 100%;
-    height: 300px;
-    max-width: 400px;
-    position: relative;
-}
-
-#carrossel img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    opacity: 0;
-}
-
-#carrossel img.selected {
-    opacity: 1;
-}
-
-/*.fade {
-    animation-name: wipe-in-right;
-    animation-duration: 2.0s;
-}
-
-@keyframes wipe-in-right {
-    from {
-      clip-path: inset(0 100% 0 0);
-    }
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-  
-  [transition-style="in:wipe:right"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
-  }
 
 /*--------------------------------*/
 
@@ -656,6 +619,20 @@ td, td img, input {
         height: 350px;
         width: 730px;
     }
+    .grade-cart {
+        flex-direction: column;
+    }
+    .container-cart{
+        width: 600px;
+        margin-right: 0px;
+        margin-bottom: 25px;
+    }
+    .grade {
+        margin: 0px;
+    }
+    .container-payment {
+        width: 225px;
+    }
 }
 @media (max-width: 650px) {
     .img-footer {
@@ -674,6 +651,18 @@ td, td img, input {
     }
     .img-footer {
         width: 560px;
+    }
+    .imgdivul {
+        width: 450px;
+        height: 250px;
+    }
+    .map {
+        width: 575px; 
+        height: 450px;
+        border:0;
+    }
+    .container-cart{
+        width: 600px;
     }
 }
 
@@ -696,7 +685,7 @@ td, td img, input {
     }
 
     .main{
-        width: 540px;
+        width: auto;
     }
 
     .title-container {
@@ -771,6 +760,12 @@ td, td img, input {
         height: 450px;
         border:0;
     }
+    .container-cart{
+        width: 500px;
+    }
+    .resolucao {
+        margin-left: 75px;
+    }
 }
 
 
@@ -792,7 +787,7 @@ td, td img, input {
     }
 
     .main{
-        width: 490px;
+        width: auto;
     }
 
     .title-container {
@@ -863,6 +858,12 @@ td, td img, input {
         height: 450px;
         border:0;
     }
+    .container-cart{
+        width: 450px;
+    }
+    .resolucao {
+        margin-left: 55px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -872,7 +873,7 @@ td, td img, input {
         margin-left: 13px;
     }
     .main {
-        width: 420px;
+        width: auto;
     }
     .title-container {
         width: 410px;
@@ -897,6 +898,12 @@ td, td img, input {
         height: 250px;
         border:0;
     }
+    .container-cart{
+        width: 400px;
+    }
+    .resolucao {
+        margin-left: 45px;
+    }
 }    
 
 
@@ -910,13 +917,14 @@ td, td img, input {
     .category{
         font-size: 15px;
         width: 90px;
+        margin-left: 7px;
     }
     .title-section{
         font-size: 18px;
     }
 
     .main {
-        width: 390px;
+        width: auto;
     }
 
     .list {
@@ -998,6 +1006,15 @@ td, td img, input {
         height: 250px;
         border:0;
     }
+    .table-header-item {
+        font-size: 18px;
+    }
+    #total-geral {
+        font-size: 18px;
+    }
+    .resolucao {
+        margin-left: 40px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1006,11 +1023,11 @@ td, td img, input {
     }  
 
     .category{
-        font-size: 15px;
-        width: 90px;
+        font-size: 13px;
+        width: 80px;
     }
     .title-section{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .list {
@@ -1018,7 +1035,7 @@ td, td img, input {
     }
 
     .main{
-        width: 350px;
+        width: auto;
     }
 
     .title-container {
@@ -1093,6 +1110,8 @@ td, td img, input {
         width: 300px; 
         height: 250px;
         border:0;
+    }.container-cart{
+        width: 200px;
     }
 }
 @media (max-width: 320px) {
@@ -1121,12 +1140,17 @@ td, td img, input {
     }
 
     .title-container {
-        width: 280px;
+        width: auto;
         height: 60px;
     }
 
     .container-product {
         font-size: 17px;
+        height: 500px;
+    }
+    .img {
+        width: 200px;
+        height: 150px;
     }
 
     .description{
@@ -1134,6 +1158,7 @@ td, td img, input {
     }
 
     .options {
+        padding: 0px;
         font-size: 14px;
         margin-left: 55px;
     }
@@ -1179,5 +1204,8 @@ td, td img, input {
     }
     .img-footer {
         width: 240px;
+    }
+    .resolucao {
+        margin-left: 34px;
     }
 }

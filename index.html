@@ -11,6 +11,7 @@
 <link href="estilo.css" rel="stylesheet">
 <link rel="shotcut icon" href="imagens/favicon.ico" type="image/x-icon">
 <title>Crocante & Cia</title>
+<script src="script2.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,46 +29,31 @@
 
     <section class="container" id="catPaes" onclick="redirecionar('iframe1')">
         <h2 class="title-section">PÃES</h2>
-            <div id="carrossel">
-                <img  class="selected" src="imagens/paes-cereais.png" alt="pão" >
-                <img src="imagens/paes-carrosel.jpg" alt="pão">
-                <img src="imagens/paes-carrosel2.jpg" alt="pão">
-            </div>
-    </section>
+        <div>
+            <img src="imagens/paes-cereais.png" class="img">
+        </div>
+        </section>
 
-
-        <!--<section class="container" id="catDoces" onclick="redirecionar('iframe2')">
+        <section class="container" id="catDoces" onclick="redirecionar('iframe2')">
             <h2 class="title-section">DOCES</h2>
-            <div class="">
-                <div class="">
-                    <img src="imagens/doce.png" alt="doce" class="img">
-                </div>
-                <div class="">
-                    <img src="imagens/.jpg" class="img">
-                </div>
-                <div class="">
-                    <img src="imagens/.jpg" class="img">
-                </div>
-        </section>-->
+            <div>
+                <img src="imagens/doce.png" class="img">
+            </div>
+        </section>
 
-
-        <!--<section class="container" id="catSalgados" onclick="redirecionar('iframe3')">
+        <section class="container" id="catSalgados" onclick="redirecionar('iframe3')">
             <h2 class="title-section">SALGADOS</h2>
-            <div class="">
-                <img src="imagens/salgado.png" alt="salgado" class="img">
+            <div>
+                <img src="imagens/salgado.png" class="img">
             </div>
-            <div class="">
-                <img src="imagens/.jpg" class="img">
-            </div>
-            <div class="carrossel-item fade2">
-                <img src="imagens/.jpg" class="img">
-            </div>-->
         </section>
 
 
         <section class="container" id="catBebidas" onclick="redirecionar('iframe4')">
             <h2 class="title-section">BEBIDAS</h2>
-            <img src="imagens/bebidas.png" alt="bebidas" class="img">
+            <div>
+                <img src="imagens/bebidas-carrossel2.jpg" class="img">
+            </div>
         </section>
 
     </div>
@@ -132,7 +118,6 @@
 </button>
 
 <script src="script1.js" defer></script>
-<script src="script2.js" defer></script>
 <script src="script4.js" defer></script>
 
 </body>
