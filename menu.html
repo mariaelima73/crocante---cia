@@ -47,34 +47,31 @@
     </div>
 
 <!--Tabela-->
+<h2 class="carrinho">CARRINHO</h2>
 
     <div class="grade-cart">
-
         <table class="container-cart" id="cart">
-            
+            <!--CABEÇALHO DA TABELA-->
             <thead>
                 <tr>
-                <th class="table-header-item product-header"><!--Imagem--></th>
-                <th class="table-header-item product-header">Produto</th>
-                <th class="table-header-item preco-header">Preço</th>
-                <th class="table-header-item quant-header">Quantidade</th>
+                    <th class="table-header-item imagem-header"><!--Imagem--></th>
+                    <th class="table-header-item product-header">Produto</th>
+                    <th class="table-header-item preco-header">Preço</th>
+                    <th class="table-header-item quant-header">Quant.</th>
+                    <th class="table-header-item preco-header">Total</th>
+                    <th class="table-header-item remover-header"><!--Remover--></th>    
                 </tr>
             </thead>
 
             <tbody>
-
-
+                <!--Aqui aparecerão os produtos-->
             </tbody>
 
             <!--RODAPÉ DA TABELA-->
             <tfoot>
                 <tr>
-                    <td colspan="3">
-                        <div class="table-total">                        
-                            <strong>Total:</strong>
-                            <span class="preco">R$ 1000,00</span>
-                            <br>
-                        </div>
+                    <td colspan="6">
+                        <div id="total-geral"><strong>Total dos Itens: R$ 0,00</strong></div>
                     </td>
                 </tr>   
             </tfoot>
@@ -85,21 +82,20 @@
             
             <div class="payment">
                 <p class="for-payment">
-                <input type="radio" name="opção_payment">
+                <input type="radio" name="opção_payment" value="boleto" checked>
                 <label>BOLETO</label>
-                <img src="imagens/boleto-1-1-removebg-preview.svg" alt="boleto" class="img-payment">
+                <img src="imagens/boleto.svg" alt="boleto" class="img-payment">
                 </p>
                 <p class="for-payment">
-                <input type="radio" name="opção_payment">
+                <input type="radio" name="opção_payment" value="cartão">
                 <label>CARTÃO</label>
                 <img src="imagens/cartoes.png" alt="cartão" class="img-payment1">
                 </p>
                 <p class="for-payment">
-                <input type="radio" name="opção_payment">
+                <input type="radio" name="opção_payment" value="pix">
                 <label>PIX</label>
                 <img src="imagens/pix.png" alt="pix" class="img-payment">
                 </p>
-                
             </div>
             
             <button type="button" class="purchase-button">Finalizar compra</button>

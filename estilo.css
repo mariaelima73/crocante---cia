@@ -65,11 +65,11 @@ header {
     width: 350px;
 }
 
-.img-zoom, .container, .category, button, .carrinho{
+.img-zoom, .container, .category, button{
     transition: transform 0.7s ease;
 }
 
-.img-zoom:hover, .container:hover, .category:hover, button:hover, .carrinho:hover{
+.img-zoom:hover, .container:hover, .category:hover, button:hover{
     transform: scale(1.1);
 }
 
@@ -319,7 +319,8 @@ textarea.contact-field{
 }
 
 .resolucao {
-    width: 100%;
+    margin-left: 125px;
+    width: 80%;
     height: 800px;
     display: none; /* Todos iframes são ocultos inicialmente */
 }
@@ -343,11 +344,6 @@ textarea.contact-field{
 .logotipo1 {
     width: 100px;
     height: 100px;
-}
-
-.carrinho {
-    width: 50px;
-    height: 50px;    
 }
 
 .list {
@@ -488,8 +484,33 @@ h4 {
 
 /*TABELA CARRINHO*/
 
+.carrinho{
+    color: #422709;
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    border: 1px solid #f6e6cc;
+    background-color: #f6e6cc;
+    backdrop-filter: blur(8px);
+    box-shadow: 6px 6px #422709;
+    font-family: "PT Serif", cursive;
+}
+
 input[type="number"] {
-    width: 60px;
+    width: 40px;
+}
+
+td, td img, input {
+    align-items: center;
+    text-align: center; 
+}
+
+.imagem-cart {
+    background-position: fixed;
+    background-repeat: round;
+    background-size: 100%;
+    width: 900px;
+    height: 90px;
 }
 
 .container-cart {
@@ -547,16 +568,18 @@ input[type="number"] {
     text-transform: uppercase;
     border: 0;
     box-shadow: 2px 2px 2px #422709;
-    display: flex;
     cursor: pointer;
 }
 
 
-.table-total {
+#total-geral {
+    display: flex;
+    justify-content: center;
     font-family: "Platypi", cursive;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
-    padding: 15px;
+    text-transform: uppercase;
+
 }
 
 .container-payment {

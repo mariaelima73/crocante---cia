@@ -54,10 +54,10 @@
                     </div>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Sucos Variados" data-price="4,99" data-image="imagens/sucos-variados.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Sucos Variados" data-price="4,99" data-image="imagens/sucos-variados.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Sucos Variados" data-price="4.99" data-image="imagens/sucos-variados.jpg">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Sucos Variados" data-price="4.99" data-image="imagens/sucos-variados.jpg">Comprar</button>
             </div>
         </div>
         
@@ -80,10 +80,10 @@
                 </div>
             
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Chá de Canela Francesa com Limão" data-price="3,49" data-image="imagens/cha1.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Chá de Canela Francesa com Limão" data-price="3,49" data-image="imagens/cha1.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Chá de Canela Francesa com Limão" data-price="3.49" data-image="imagens/cha1.jpg">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Chá de Canela Francesa com Limão" data-price="3.49" data-image="imagens/cha1.jpg">Comprar</button>
             </div>
         </div>
         
@@ -105,10 +105,10 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Chá de Cravinho Natural" data-price="3,49" data-image="imagens/cha2.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Chá de Cravinho Natural" data-price="3,49" data-image="imagens/cha2.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Chá de Cravinho Natural" data-price="3.49" data-image="imagens/cha2.jpg">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Chá de Cravinho Natural" data-price="3.49" data-image="imagens/cha2.jpg">Comprar</button>
             </div>
         </div>
         
@@ -130,10 +130,10 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Café Puro" data-price="6,99" data-image="imagens/café.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Café Puro" data-price="6,99" data-image="imagens/café.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Café Puro" data-price="6.99" data-image="imagens/café.png">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Café Puro" data-price="6.99" data-image="imagens/café.png">Comprar</button>
             </div>
         </div>
         
@@ -155,10 +155,10 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Café Puro" data-price="8,99" data-image="imagens/cafe-leite.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Café Puro" data-price="8,99" data-image="imagens/cafe-leite.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Café com Leite" data-price="8.99" data-image="imagens/cafe-leite.jpg">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Café com Leite" data-price="8.99" data-image="imagens/cafe-leite.jpg">Comprar</button>
             </div>
         </div>
         
@@ -196,21 +196,21 @@
                 </div>
             </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
-                    data-name="Refrigerantes" data-price="3,99" data-image="imagens/refrigerantes.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
-                    data-name="Refrigerantes" data-price="3,99" data-image="imagens/refrigerantes.jpg">Comprar</button>
+                <button class="button button-buy" type="button"
+                    data-name="Refrigerantes" data-price="3.99" data-image="imagens/refrigerantes.jpg">Adicionar ao carrinho</button>
+                <button class="button button-buy-now" type="button"
+                    data-name="Refrigerantes" data-price="3.99" data-image="imagens/refrigerantes.jpg">Comprar</button>
             </div>
         </div>
     </div>
 
     <script defer>
         //Carrinho
-    document.querySelectorAll('#button-buy').forEach(button => {
+    document.querySelectorAll('.button-buy, .button-buy-now').forEach(button => {
     button.addEventListener('click', function() {
         const product = {
             name: this.getAttribute('data-name'),
-            price: this.getAttribute('data-price'),
+            price: Number(this.getAttribute('data-price')),
             image: this.getAttribute('data-image')
         };
         window.parent.postMessage(product, '*'); /*usamos '*' como origem, o que permite qualquer origem.
@@ -218,6 +218,13 @@
     });
 });
 
+var buttons = document.querySelectorAll('.button-buy-now');
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Envia uma mensagem para o documento pai indicando que o botão foi clicado
+        window.parent.postMessage('button-buy-now', '*');
+    });
+});
     </script>
 
 </body>

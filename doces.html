@@ -37,9 +37,9 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Donuts" data-price="4.99" data-image="imagens/donuts.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
+                <button class="button button-buy-now" type="button"
                     data-name="Donuts" data-price="4.99" data-image="imagens/donuts.jpg">Comprar</button>
             </div>
         </div>
@@ -66,9 +66,9 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Croassaint Recheado" data-price="7.99" data-image="imagens/croassaint.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
+                <button class="button button-buy-now" type="button"
                     data-name="Croassaint Recheado" data-price="7.99" data-image="imagens/croassaint.jpg">Comprar</button>
             </div>
         </div>
@@ -91,9 +91,9 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Bolo com cobertura" data-price="49.99" data-image="imagens/bolo2.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
+                <button class="button button-buy-now" type="button"
                     data-name="Bolo com cobertura" data-price="49.99" data-image="imagens/bolo2.jpg">Comprar</button>
             </div>
         </div>
@@ -120,9 +120,9 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Macarrons" data-price="7.99" data-image="imagens/macarrons.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
+                <button class="button button-buy-now" type="button"
                     data-name="Macarrons" data-price="7.99" data-image="imagens/macarrons.jpg">Comprar</button>
             </div>
         </div>
@@ -149,9 +149,9 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Sonho cremoso" data-price="3.99" data-image="imagens/sonho.jpg">Adicionar ao carrinho</button>
-                <button class="button" id="button-buy-now" type="button"
+                <button class="button button-buy-now" type="button"
                     data-name="Sonho cremoso" data-price="3.99" data-image="imagens/sonho.jpg">Comprar</button>
             </div>
         </div>
@@ -178,7 +178,7 @@
                     </p>
                 </div>
             <div class="add-button">
-                <button class="button" id="button-buy" type="button"
+                <button class="button button-buy" type="button"
                     data-name="Bolo Recheado" data-price="39.99" data-image="imagens/bolo1.jpg">Adicionar ao carrinho</button>
                 <button class="button" id="button-buy-now" type="button"
                     data-name="Bolo Recheado" data-price="39.99" data-image="imagens/bolo1.jpg">Comprar</button>
@@ -188,11 +188,11 @@
 
     <script defer>
         //Carrinho
-    document.querySelectorAll('#button-buy, #button-buy-now').forEach(button => {
+    document.querySelectorAll('.button-buy, .button-buy-now').forEach(button => {
     button.addEventListener('click', function() {
         const product = {
             name: this.getAttribute('data-name'),
-            price: this.getAttribute('data-price'),
+            price: Number(this.getAttribute('data-price')),
             image: this.getAttribute('data-image')
         };
         window.parent.postMessage(product, '*'); /*usamos '*' como origem, o que permite qualquer origem.
@@ -200,10 +200,13 @@
     });
     });
 
-    document.getElementById('button-buy-now').addEventListener('click', function() {
-    // Envia uma mensagem para o documento pai indicando que o botão foi clicado
-    window.parent.postMessage('button-buy-now', '*');
+    var buttons = document.querySelectorAll('.button-buy-now');
+buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+        // Envia uma mensagem para o documento pai indicando que o botão foi clicado
+        window.parent.postMessage('button-buy-now', '*');
     });
+});
 
     </script>
     
