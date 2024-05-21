@@ -133,7 +133,6 @@ finalizarCompra.addEventListener('click', function() {
             //e da o valor a variavel criada
             opcaoSelect = opcao.value
         }
-    })
 
     // Verifica se o carrinho está vazio
     if (totalGeral === 0) {
@@ -143,4 +142,5 @@ finalizarCompra.addEventListener('click', function() {
         alert(`Sua compra foi finalizada, seu pedido é o número ${orderNumber}. Agradecemos a preferência e aguardamos o seu retorno.`);
         limparCarrinho(totalGeral = 0)
     }
-});
+})
+})

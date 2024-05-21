@@ -95,7 +95,6 @@ header {
     border-radius: 5px;
 }
 
-/*Carrosel HOME*/
 
 .slideshow-container {
     max-width: 500px;
@@ -726,7 +725,7 @@ td, td img, input {
     }
 
     .main{
-        width: 540px;
+        width: auto;
     }
 
     .title-container {
@@ -843,7 +842,7 @@ td, td img, input {
     }
 
     .main{
-        width: 490px;
+        width: auto;
     }
 
     .title-container {
@@ -1200,7 +1199,7 @@ td, td img, input {
         width: 100px;
     }
     .title-section{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .list {
@@ -1208,7 +1207,7 @@ td, td img, input {
     }
 
     .main{
-        width: 350px;
+        width: auto;
     }
 
     .title-container {
@@ -1281,6 +1280,8 @@ td, td img, input {
         width: 300px; 
         height: 250px;
         border:0;
+    }.container-cart{
+        width: 200px;
     }
     .resolucao {
         margin: auto;
