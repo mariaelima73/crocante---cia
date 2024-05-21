@@ -13,26 +13,25 @@ addEventListener('scroll', () => {
     }
 })
 
-//-----------------------------------------------------------------------
-
-//TRANSIÇÃO NO INDEX
-
-let time = 1000, 
-    currentImageIndex = 0,
-    images = document.querySelectorAll("#carrossel img")
-    max = images.length
-
-    function nextImage() {
-        currentImageIndex++
-
-        if(currentImageIndex >= max)
-            currentImageIndex = 0
-
-        images[currentImageIndex].classList.add('selected')
+// Função para mostrar slides de um carrossel específico
+function showSlides(carouselId, slideIndex) {
+    var slides = document.querySelectorAll('#' + carouselId + ' .slide');
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
     }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(function() { showSlides(carouselId, slideIndex); }, 2000);
+}
 
-    function start() {
-        
-    }
+// Inicializar todos os carrosseis
+function initCarousels() {
+    showSlides("carousel1", 0);
+    showSlides("carousel2", 0);
+    showSlides("carousel3", 0);
+    showSlides("carousel4", 0);
+}
 
-window.addEventListener("load", start)
+// Iniciar a função quando a página for carregada
+window.onload = initCarousels;

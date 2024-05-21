@@ -12,7 +12,6 @@
        
 }
 
-
 /*PÁGINA INDEX*/
 
 body {
@@ -98,43 +97,25 @@ header {
 
 /*Carrosel HOME*/
 
-#carrossel {
-    width: 100%;
-    height: 300px;
-    max-width: 400px;
+.slideshow-container {
+    max-width: 500px;
     position: relative;
+    margin: auto;
 }
 
-#carrossel img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: cover;
-    opacity: 0;
+.slide {
+    display: none;
 }
 
-#carrossel img.selected {
-    opacity: 1;
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-/*.fade {
-    animation-name: wipe-in-right;
-    animation-duration: 2.0s;
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
-
-@keyframes wipe-in-right {
-    from {
-      clip-path: inset(0 100% 0 0);
-    }
-    to {
-      clip-path: inset(0 0 0 0);
-    }
-  }
-  
-  [transition-style="in:wipe:right"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
-  }
-
 /*--------------------------------*/
 
 .title-section {
@@ -643,6 +624,14 @@ td, td img, input {
 
 /*Aplicando MEDIA no site*/
 
+@media (max-width: 1440px) {
+    .grade{
+        gap: 50px;
+    }
+    .delivery a{
+        display: flex;
+    }
+}
 
 @media (max-width: 768px) {
     .img-footer {
@@ -655,6 +644,25 @@ td, td img, input {
     .imgdivul{
         height: 350px;
         width: 730px;
+    }
+    .delivery a{
+        display: flex;
+    }
+    .resolucao {
+        margin: auto;
+    }
+    .container-cart{
+        width: auto;
+        margin: 0px 0px 20px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+    .imagem-cart{
+        height: 50px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 18px;
     }
 }
 @media (max-width: 650px) {
@@ -674,6 +682,28 @@ td, td img, input {
     }
     .img-footer {
         width: 560px;
+    }
+    .delivery a{
+        display: flex;
+    }
+    .delivery img{
+        width: 150px;
+    }
+    .resolucao {
+        margin: auto;
+    }
+    .container-cart{
+        width: auto;
+        margin: 0px 0px 20px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+    .imagem-cart{
+        height: 40px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 18px;
     }
 }
 
@@ -771,8 +801,29 @@ td, td img, input {
         height: 450px;
         border:0;
     }
+    .delivery a{
+        display: flex;
+    }
+    .delivery img{
+        width: 130px;
+    }
+    .resolucao {
+        margin: auto;
+    }
+    .container-cart{
+        width: auto;
+        margin: 0px 0px 20px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+    .imagem-cart{
+        height: 40px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 15px;
+    }
 }
-
 
 @media (max-width: 550px) {
     .logo {
@@ -805,16 +856,16 @@ td, td img, input {
     }
 
     .description{
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .options {
-        font-size: 18px;
+        font-size: 17px;
         margin-left: 100px;
     }
 
     .options2 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .options3 {
@@ -844,14 +895,6 @@ td, td img, input {
         font-size: 18px;
     }
 
-    .delivery1 {
-        width: 190px;
-    }
-
-    .delivery2 {
-        width: 120px;
-        margin: 17px;
-    }
     .img-footer {
         width: 450px;
     }
@@ -863,6 +906,64 @@ td, td img, input {
         height: 450px;
         border:0;
     }
+    .delivery a{
+        display: flex;
+    }
+    .delivery img{
+        width: 130px;
+    }
+    .resolucao {
+        margin: auto;
+    }
+    .container-cart{
+        width: auto;
+        margin: 0px 0px 20px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+    .imagem-cart{
+        width: 20%;
+        height: 40px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 15px;
+    }
+    .container{
+        width: 380px;
+    }
+    .remove-button{
+        width: 90px;
+        height: 20px;
+        padding: 0px;
+    }
+    .container-product {
+        font-size: 18px;
+    }
+    .container-product img{
+        width: 330px;
+        height: 200px; 
+    }
+    .preco{
+        font-size: 17px;
+    }
+    .container-payment{
+        width: 240px;
+        height: 300px;
+    }
+    .container-payment img{
+        width: 50%;
+    }
+    .for-payment{
+        height: 25px;
+    }
+    .for-payment label{
+        font-size: 14px;
+    }
+    .purchase-button{
+        width: 180px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -872,7 +973,7 @@ td, td img, input {
         margin-left: 13px;
     }
     .main {
-        width: 420px;
+        width: auto;
     }
     .title-container {
         width: 410px;
@@ -881,14 +982,7 @@ td, td img, input {
     .img-footer {
         width: 400px;
     }
-    .delivery1 {
-        width: 220px;
-    }
 
-    .delivery2 {
-        width: 120px;
-        margin: 17px;
-    }
     .contact-map {
         max-width: 400p;
     }
@@ -897,10 +991,98 @@ td, td img, input {
         height: 250px;
         border:0;
     }
+    .delivery a{
+        display: flex;
+    }
+    .delivery img{
+        width: 130px;
+    }
+    .resolucao {
+        margin: auto;
+    }
+    .carrinho{
+        font-size: 20px;
+    }
+    .container-cart{
+        font-size: 14px;
+        width: auto;
+    }
+    td{
+        padding-bottom: 10px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+    .imagem-cart, .imagem-header{
+        display: none;
+    }
+    .table-header-item, .remove-button{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    #total-geral{
+        font-size: 15px;
+    }
+    
+    .container{
+        width: 380px;
+    }
+    .remove-button{
+        width: 90px;
+        height: 20px;
+        padding: 0px;
+    }
+    .container-product {
+        font-size: 18px;
+        height: 570px;
+    }
+    .container-product img{
+        width: 330px;
+        height: 200px; 
+    }
+    .preco{
+        font-size: 17px;
+    }
+    .container-payment{
+        width: 240px;
+        height: 300px;
+    }
+    .container-payment img{
+        width: 50%;
+    }
+    .for-payment{
+        height: 25px;
+    }
+    .for-payment label{
+        font-size: 14px;
+    }
+    .purchase-button{
+        width: 180px;
+        font-size: 16px;
+    }
+    .options {
+        height: 40px;
+        font-size: 12px;
+        margin-left: 30px;
+        padding: 0px 0px 5px;
+    }
+
+    .options2 {
+        height: 40px;
+        font-size: 11px;
+        padding: 0px 0px 5px;
+    }
+
+    .options3 {
+        height: 70px;
+        font-size: 11px;
+        padding: 0px 0px 5px;
+        margin-left: 20px;
+    }
 }    
 
 
-@media (max-width: 425px) {
+@media (max-width: 450px), (max-width: 425px){
     /*Página Index*/
     
     .logo {
@@ -908,15 +1090,15 @@ td, td img, input {
     }  
 
     .category{
-        font-size: 15px;
-        width: 90px;
+        font-size: 13px;
+        width: 80px;
     }
     .title-section{
         font-size: 18px;
     }
 
     .main {
-        width: 390px;
+        width: auto;
     }
 
     .list {
@@ -932,7 +1114,10 @@ td, td img, input {
     .container-product {
         font-size: 20px;
     }
-
+    .container img{
+        width: 300px;
+        height: 200px; 
+    }
     .description{
         font-size: 16px;
     }
@@ -975,7 +1160,7 @@ td, td img, input {
     }
 
     .weabout {
-        font-size: 20px;
+        font-size: 15px;
         margin: 20px;
     }
 
@@ -998,16 +1183,21 @@ td, td img, input {
         height: 250px;
         border:0;
     }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 375px) {
     .logo {
         width: 200px;
     }  
-
+    .img{
+        height: 180px;
+    }
     .category{
         font-size: 15px;
-        width: 90px;
+        width: 100px;
     }
     .title-section{
         font-size: 18px;
@@ -1072,7 +1262,7 @@ td, td img, input {
     }
 
     .weabout {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .delivery1 {
@@ -1083,9 +1273,7 @@ td, td img, input {
         width: 110px;
         margin: 17px;
     }
-    .img-footer {
-        width: 300px;
-    }
+    
     .contact-map {
         max-width: 500p;
     }
@@ -1094,6 +1282,81 @@ td, td img, input {
         height: 250px;
         border:0;
     }
+    .resolucao {
+        margin: auto;
+    }
+    .container-product {
+        font-size: 17px;
+        height: 440px;
+    }
+    .container-product img{
+        width: 160px;
+        height: 120px;
+    }
+    .button{
+        width: 80%;
+        padding: 2px;
+    }
+    .preco{
+        font-size: 15px;
+        padding: 0px 0px 5px 0px;
+    }
+    .carrinho{
+        font-size: 20px;
+    }
+    .container-cart{
+        width: 100px;
+        margin: 0px 0px 20px;
+        font-size: 12px;
+    }
+    .container-cart input{
+        width: 30px;
+        font-size: 12px;
+    }
+    .imagem-cart, .imagem-header{
+        display: none;
+    }
+    .container-payment{
+        width: 190px;
+        height: 280px;
+    }
+    .container-payment img{
+        width: 50%;
+    }
+    .for-payment{
+        height: 25px;
+    }
+    .for-payment label{
+        font-size: 14px;
+    }
+    .purchase-button{
+        width: 170px;
+        font-size: 15px;
+    }
+    .grade-cart{
+        flex-direction: column;
+    }
+
+    .title-payment{
+        font-size: 16px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 12px;
+    }
+
+    .remove-button{
+        width: 70px;
+        height: 20px;
+        padding: 0px;
+    }
+    .imgdivul{
+        width: 100%;
+        height: auto;
+    }
+    .delivery a{
+        display: flex;
+    }
+
 }
 @media (max-width: 320px) {
     .logo {
@@ -1105,11 +1368,18 @@ td, td img, input {
         width: 70px;
     }
 
+    .img{
+        height: 150px;
+    }
+
     .subtitle{
         font-size: 22px;
     }
     .title-section{
-        font-size: 20px;
+        font-size: 16px;
+    }
+    .product-title{
+        font-size: 16px;
     }
 
     .list {
@@ -1121,29 +1391,102 @@ td, td img, input {
     }
 
     .title-container {
-        width: 280px;
-        height: 60px;
+        width: 200px;
+        height: 50px;
     }
 
     .container-product {
         font-size: 17px;
+        height: 440px;
+    }
+    .container-product img{
+        width: 160px;
+        height: 120px;
+    }
+    .button{
+        width: 80%;
+        padding: 2px;
+    }
+    .preco{
+        font-size: 15px;
+        padding: 0px 0px 5px 0px;
+    }
+    .carrinho{
+        font-size: 20px;
+    }
+    .container-cart{
+        width: 100px;
+        margin: 0px 0px 20px;
+        font-size: 12px;
+    }
+    .container-cart input{
+        width: 30px;
+        font-size: 12px;
+    }
+    .imagem-cart, .imagem-header{
+        display: none;
+    }
+    .container-payment{
+        width: 190px;
+        height: 280px;
+    }
+    .container-payment img{
+        width: 50%;
+    }
+    .for-payment{
+        height: 25px;
+    }
+    .for-payment label{
+        font-size: 14px;
+    }
+    .purchase-button{
+        width: 170px;
+        font-size: 15px;
+    }
+    .grade-cart{
+        flex-direction: column;
     }
 
+    .title-payment{
+        font-size: 16px;
+    }
+    .table-header-item, #total-geral, .remove-button{
+        font-size: 12px;
+    }
+
+    .remove-button{
+        width: 70px;
+        height: 20px;
+        padding: 0px;
+    }
+    .imgdivul{
+        width: 100%;
+        height: auto;
+    }
+    .delivery a{
+        display: flex;
+    }
     .description{
-        font-size: 14px;
-    }
-
-    .options {
-        font-size: 14px;
-        margin-left: 55px;
-    }
-
-    .options2 {
         font-size: 13px;
     }
 
+    .options {
+        height: 40px;
+        font-size: 12px;
+        margin-left: 30px;
+        padding: 0px 0px 5px;
+    }
+
+    .options2 {
+        height: 40px;
+        font-size: 11px;
+        padding: 0px 0px 5px;
+    }
+
     .options3 {
-        padding-left: 15px;
+        height: 60px;
+        font-size: 11px;
+        padding: 0px 0px 5px;
     }
 
     .footer-item img {
@@ -1179,5 +1522,8 @@ td, td img, input {
     }
     .img-footer {
         width: 240px;
+    }
+    .resolucao {
+        margin: auto;
     }
 }

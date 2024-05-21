@@ -135,11 +135,12 @@ finalizarCompra.addEventListener('click', function() {
         }
     })
 
-    if (totalGeral === 0){
-        alert('Adicione produtos ao carrinho para poder finalizar sua compra!')
-    } else if (opcaoSelect === 'boleto' || 'cartão' || 'pix'){
-            var orderNumber = Math.floor(10000000 + Math.random() * 90000000)
-            alert(`Sua compra foi finalizada, seu pedido é o número ${orderNumber}. Agradecemos a preferência e aguardamos o seu retorno.`)
-        limparCarrinho()
+    // Verifica se o carrinho está vazio
+    if (totalGeral === 0) {
+        alert('Adicione produtos ao carrinho para poder finalizar sua compra!');
+    } else if (opcaoSelect === 'boleto' || opcaoSelect === 'cartão' || opcaoSelect === 'pix') {
+        var orderNumber = Math.floor(10000000 + Math.random() * 90000000);
+        alert(`Sua compra foi finalizada, seu pedido é o número ${orderNumber}. Agradecemos a preferência e aguardamos o seu retorno.`);
+        limparCarrinho(totalGeral = 0)
     }
-})
+});
